@@ -1,0 +1,17 @@
+<%= form_with model: @video do |f| %>
+  <%= f.label :title %><br>
+  <%= f.text_field :title %><br>
+  <ul>
+    <% @genres.each do |genre| %>
+      <li>
+        <!-- https://medium.com/programming-problem-solving-logbook/rails-multiple-checkboxes-e9c4c7fda356 -->
+        <!-- cannot emphasize how important naming the checkboxes genre_ids is, as @video.genre_ids = [1,3,5] makes everything work  -->
+        <%= f.check_box(:genre_ids, { multiple: true }, genre.id, false) %>
+        <!-- <input type="checkbox" value="4" name="video[genre_ids][]" id="video_genres_4"> "Pop"  -->
+
+        <%= genre.name %>
+      </li>
+    <% end %>
+  </ul>
+  <%= f.submit %>
+<% end %>

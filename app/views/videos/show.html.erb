@@ -1,0 +1,8 @@
+
+<h1><%= @video.title %></h1>
+
+<h3>Genres:</h3>
+
+<% @video.genres.each do |genre| %>
+  <%= genre.name %> <br />
+<% end %>
