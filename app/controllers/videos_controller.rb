@@ -23,6 +23,7 @@ class VideosController < ApplicationController
     # {"title": "Red Velvet mix", "genre_ids": ["2", "4"]}
     # genre_ids: originally written as custom overwriting method
     # only to realize that @video.genre_ids is an awesome ActiveRecord Method
+    binding.pry
     @video = Video.new(video_params)
     @video.save
     redirect_to @video
