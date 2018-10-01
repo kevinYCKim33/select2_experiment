@@ -6,3 +6,8 @@
 <% @video.genres.each do |genre| %>
   <%= genre.name %> <br />
 <% end %>
+
+<br />
+
+<%=link_to 'Edit', edit_video_path(@video) %> <br>
+<%=link_to 'Video Index', videos_path %>

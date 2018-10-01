@@ -14,4 +14,6 @@
 //= require activestorage
 //= require turbolinks
 //= require cable
+//= require jquery
 //= require select2
+//= require select2_sandbox

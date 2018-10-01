@@ -1,7 +1,7 @@
 <%= form_with model: @video do |f| %>
   <%= f.label :title %><br>
   <%= f.text_field :title %><br>
-  <%= f.select :genre_ids, @genres.map {|genre| [genre.name, genre.id] }, { include_hidden: false }, { multiple: true }  %>
+  <%= f.select :genre_ids, @genres.map {|genre| [genre.name, genre.id] }, { include_hidden: false }, { multiple: true, class: "genre-multi-selector" }  %><br>
   <%= f.submit %>
 <% end %>
 
@@ -15,3 +15,9 @@
   <option value="5">Soul</option>
 </select>
 -->
+
+<!-- <select class="js-example-basic-multiple" name="states[]" multiple="multiple">
+  <option value="AL">Alabama</option>
+    ...
+  <option value="WY">Wyoming</option>
+</select> -->
